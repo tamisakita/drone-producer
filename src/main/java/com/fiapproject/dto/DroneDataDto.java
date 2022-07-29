@@ -1,4 +1,4 @@
-package com.fiapproject.droneproducer.model;
+package com.fiapproject.dto;
 
 import lombok.*;
 
@@ -9,7 +9,9 @@ import java.io.Serializable;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DroneData implements Serializable {
+public class DroneDataDto implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private Long id_drone;
     private Float latitude;
