@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "fb202d83-6bc6-4115-bdc3-da6df2849e0b",
+		"name": "Drone Tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7627535"
+	},
+	"item": [
+		{
+			"name": "Send Drone Data",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"id\", pm.iterationData.get(\"id\"));\r",
+							"pm.collectionVariables.set(\"latitude\", pm.iterationData.get(\"latitude\"));\r",
+							"pm.collectionVariables.set(\"longitude\", pm.iterationData.get(\"longitude\"));\r",
+							"pm.collectionVariables.set(\"temperatura\", pm.iterationData.get(\"temperatura\"));\r",
+							"pm.collectionVariables.set(\"umidade\", pm.iterationData.get(\"umidade\"));\r",
+							"pm.collectionVariables.set(\"rastreamento\", pm.iterationData.get(\"rastreamento\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/drone?id={{id}}&latitude={{latitude}}&longitude={{longitude}}&temperatura={{temperatura}}&umidade={{umidade}}&rastreamento={{rastreamento}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"drone"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{id}}"
+						},
+						{
+							"key": "latitude",
+							"value": "{{latitude}}"
+						},
+						{
+							"key": "longitude",
+							"value": "{{longitude}}"
+						},
+						{
+							"key": "temperatura",
+							"value": "{{temperatura}}"
+						},
+						{
+							"key": "umidade",
+							"value": "{{umidade}}"
+						},
+						{
+							"key": "rastreamento",
+							"value": "{{rastreamento}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "latitude",
+			"value": "1"
+		},
+		{
+			"key": "longitude",
+			"value": "1"
+		},
+		{
+			"key": "temperatura",
+			"value": "1"
+		},
+		{
+			"key": "umidade",
+			"value": "1"
+		},
+		{
+			"key": "rastreamento",
+			"value": "true"
+		}
+	]
+}
