@@ -19,8 +19,4 @@ public class QueueSender {
         this.rabbitTemplate.convertAndSend(this.queue.getName(), droneDataDto);
     }
 
-//    public void send(String order) {
-//        rabbitTemplate.convertAndSend(this.queue.getName(), order);
-//    }
-
 }
