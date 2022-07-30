@@ -28,7 +28,7 @@ queue.name=fiap.scj.mensagens
 server.port=8090
 ```
 
-* No Postman importar a coleção Drone Tracker.postman_collection.json e rodar a coleção o csv drones.csv com 10 segundos de delay.
+* No Postman importar a coleção **Tracker.postman_collection.json** e rodar a coleção o **drones.csv** com 10 segundos de delay.
 
 ## Funcionalidade
 
